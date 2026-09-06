@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NMG Studios</title>
+<meta name="description" content="NMG Studios is a games studio in London. We make quiet, unhurried puzzle games. Our first is Topple.">
+<link rel="icon" href="topple-icon.png">
+<meta property="og:title" content="NMG Studios">
+<meta property="og:description" content="A games studio in London making quiet, unhurried puzzle games.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alim2219.github.io/nmg-studios/">
+<meta property="og:image" content="https://alim2219.github.io/nmg-studios/topple-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+<style>
+/* A studio that makes unhurried games should not have a shouty website.
+   One accent, taken from the game; everything else is air and type. */
+:root{
+  --ground:#f0f2f1; --surface:#ffffff; --sunk:#e6e9e7;
+  --ink:#131817; --ink-2:#3d4643; --muted:#656e69;
+  --line:#d9ded9; --line-2:#c3cac5;
+  --teal:#186f6a; --teal-wash:#e0f0ee;
+  --shadow:0 1px 2px rgba(19,24,23,.04), 0 8px 28px rgba(19,24,23,.07);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0e1312; --surface:#161c1b; --sunk:#121817;
+    --ink:#e9ece9; --ink-2:#bac2be; --muted:#87908b;
+    --line:#252d2b; --line-2:#37403d;
+    --teal:#4ad1c4; --teal-wash:#0d2b29;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 30px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0e1312; --surface:#161c1b; --sunk:#121817;
+  --ink:#e9ece9; --ink-2:#bac2be; --muted:#87908b;
+  --line:#252d2b; --line-2:#37403d;
+  --teal:#4ad1c4; --teal-wash:#0d2b29;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} *{transition:none!important; animation:none!important} }
+body{
+  margin:0; padding:0 24px 0;
+  background:var(--ground); color:var(--ink);
+  font-family:"Karla",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:17px; line-height:1.65;
+}
+main{max-width:720px; margin:0 auto}
+a{color:var(--teal); text-underline-offset:3px; text-decoration-thickness:1px}
+a:focus-visible{outline:2px solid var(--teal); outline-offset:3px; border-radius:3px}
+p{margin:0 0 18px; max-width:60ch}
+
+/* ---- masthead ---- */
+.masthead{
+  min-height:min(78vh,620px); display:flex; flex-direction:column; justify-content:center;
+  padding:72px 0 40px;
+}
+.mark{
+  font-family:"Newsreader",Georgia,"Times New Roman",serif;
+  font-weight:300; font-size:clamp(46px,11vw,86px); line-height:1;
+  letter-spacing:-.028em; margin:0 0 26px; color:var(--ink);
+}
+.mark em{font-style:italic; color:var(--teal)}
+.statement{
+  font-family:"Newsreader",Georgia,serif; font-weight:300;
+  font-size:clamp(20px,3.6vw,27px); line-height:1.42; letter-spacing:-.008em;
+  color:var(--ink-2); margin:0; max-width:26ch; text-wrap:balance;
+}
+.meta{
+  margin:38px 0 0; display:flex; flex-wrap:wrap; gap:8px 22px;
+  font-size:13px; letter-spacing:.11em; text-transform:uppercase;
+  font-weight:600; color:var(--muted);
+}
+
+/* ---- sections ---- */
+section{padding:60px 0; border-top:1px solid var(--line)}
+.label{
+  font-size:12px; font-weight:600; letter-spacing:.15em; text-transform:uppercase;
+  color:var(--teal); margin:0 0 18px;
+}
+h2{
+  font-family:"Newsreader",Georgia,serif; font-weight:400;
+  font-size:clamp(27px,5vw,36px); line-height:1.18; letter-spacing:-.018em;
+  margin:0 0 20px; text-wrap:balance;
+}
+h3{font-size:16px; font-weight:600; margin:0 0 6px; letter-spacing:-.005em}
+
+/* ---- the game ---- */
+.game{display:grid; grid-template-columns:auto 1fr; gap:20px; align-items:center; margin:0 0 30px}
+.game img.icon{
+  width:76px; height:76px; border-radius:17px; display:block;
+  border:1px solid var(--line); box-shadow:var(--shadow);
+}
+.game-name{font-family:"Newsreader",Georgia,serif; font-weight:400; font-size:29px;
+  line-height:1.15; letter-spacing:-.018em; margin:0 0 4px}
+.game-sub{margin:0; color:var(--muted); font-size:15px}
+
+.shots{
+  display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:32px 0 0;
+}
+.shots figure{margin:0}
+.shots img{
+  width:100%; height:auto; display:block; border-radius:14px;
+  border:1px solid var(--line); box-shadow:var(--shadow); background:var(--sunk);
+}
+.shots figcaption{
+  margin-top:10px; font-size:12.5px; letter-spacing:.09em; text-transform:uppercase;
+  font-weight:600; color:var(--muted);
+}
+@media(max-width:560px){ .shots{grid-template-columns:1fr; gap:24px} }
+
+.facts{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1px;
+  background:var(--line); border:1px solid var(--line); border-radius:12px;
+  overflow:hidden; margin:34px 0 0;
+}
+.facts div{background:var(--surface); padding:16px 18px}
+.facts dt{font-size:12px; letter-spacing:.11em; text-transform:uppercase;
+  font-weight:600; color:var(--muted); margin:0 0 4px}
+.facts dd{margin:0; font-family:"Newsreader",Georgia,serif; font-size:23px;
+  font-weight:400; letter-spacing:-.01em; color:var(--ink)}
+
+/* ---- contact ---- */
+.contact a{
+  font-family:"Newsreader",Georgia,serif; font-weight:300;
+  font-size:clamp(21px,4vw,30px); letter-spacing:-.015em;
+}
+
+/* ---- legal ---- */
+footer{
+  border-top:1px solid var(--line); margin-top:20px;
+  padding:36px 0 64px; color:var(--muted); font-size:14px; line-height:1.75;
+}
+footer .rows{display:grid; gap:3px; margin:0 0 20px}
+footer b{color:var(--ink-2); font-weight:600}
+footer nav{display:flex; flex-wrap:wrap; gap:6px 20px; padding-top:18px; border-top:1px solid var(--line)}
+footer nav a{font-size:14px}
+</style>
+</head>
+<body>
+<main>
+
+<header class="masthead">
+  <h1 class="mark">NMG <em>Studios</em></h1>
+  <p class="statement">We make quiet games that reward thinking rather than hurrying.</p>
+  <p class="meta"><span>London</span><span>Founded 2026</span><span>One game, so far</span></p>
+</header>
+
+<section id="topple">
+  <p class="label">What we make</p>
+  <h2>Our first game is a machine you set off with one move.</h2>
+
+  <div class="game">
+    <img class="icon" src="topple-icon.png" alt="The Topple app icon" width="512" height="512">
+    <div>
+      <p class="game-name">Topple</p>
+      <p class="game-sub">A chain-reaction deduction puzzle for iOS and Android</p>
+    </div>
+  </div>
+
+  <p>Every level is a contraption waiting to go off &mdash; dominoes, rolling marbles and wooden
+  deflectors, arranged so that exactly one opening move clears the board and every other move
+  fails. There is no timer and there are no lives. The only question is which piece starts it.</p>
+
+  <p>Each of the 203 levels is machine-verified to have precisely one solution before a human
+  ever sees it, then placed by hand into a difficulty curve. That combination &mdash; proved by a
+  computer, arranged by a person &mdash; is the part we care most about getting right.</p>
+
+  <dl class="facts">
+    <div><dt>Levels</dt><dd>203</dd></div>
+    <div><dt>Solutions each</dt><dd>Exactly 1</dd></div>
+    <div><dt>Adverts in game</dt><dd>None</dd></div>
+    <div><dt>Plays offline</dt><dd>Always</dd></div>
+  </dl>
+
+  <div class="shots">
+    <figure>
+      <img src="topple-light.png" alt="A Topple level in the light theme, showing dominoes arranged on a grid" width="1080" height="1920" loading="lazy">
+      <figcaption>An early board</figcaption>
+    </figure>
+    <figure>
+      <img src="topple-dark.png" alt="A later Topple level in the dark theme, with marbles and deflectors" width="1080" height="1920" loading="lazy">
+      <figcaption>Later, in dark</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="contact">
+  <p class="label">Contact</p>
+  <h2>We read everything that arrives.</h2>
+  <p><a href="mailto:ali.m021216@gmail.com">ali.m021216@gmail.com</a></p>
+  <p style="color:var(--muted); font-size:15px; margin-top:18px">For press, support, or anything
+  about how we handle data.</p>
+</section>
+
+<footer>
+  <div class="rows">
+    <div><b>NMG STUDIOS LTD</b></div>
+    <div>Registered in England and Wales, company number <b>17428076</b></div>
+    <div>Registered office: 62 Cambridge Road, Carshalton, England, SM5 3QS</div>
+  </div>
+  <nav>
+    <a href="https://alim2219.github.io/topple-privacy/">Privacy policy</a>
+    <a href="mailto:ali.m021216@gmail.com">Email us</a>
+  </nav>
+</footer>
+
+</main>
+</body>
+</html>
