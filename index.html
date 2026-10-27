@@ -9,7 +9,7 @@
 <!-- Meta domain verification: paste the tag from Meta Business Settings -> Brand safety
      -> Domains here, e.g. <meta name="facebook-domain-verification" content="...">. -->
 <title>NMG Studios</title>
-<meta name="description" content="NMG Studios Ltd is an independent games studio in London, founded by Adam Araim and Mohammed Ali. Our first game, Topple, is out now on Google Play.">
+<meta name="description" content="NMG Studios Ltd is an independent games studio in London. Our first game, Topple, is out now on Google Play.">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="nmg-mark-512.png">
 <link rel="apple-touch-icon" href="nmg-mark-512.png">
@@ -149,16 +149,8 @@ h2{
 .phones figure:nth-child(3){margin-left:calc(var(--pw) * -.42); transform:rotate(7deg) scale(.88); z-index:1}
 
 /* ---- studio ---- */
-.studio{display:grid; gap:48px}
-@media(min-width:900px){ .studio{grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:72px; align-items:end} }
-.people{display:grid; gap:1px; background:var(--line); border:1px solid var(--line)}
-.person{background:var(--bg); display:flex; align-items:center; gap:22px; padding:26px 24px}
-.initials{
-  width:72px; height:72px; flex:none; display:grid; place-items:center;
-  border:1px solid var(--line-2); font-stretch:var(--wide); font-weight:600; font-size:20px; letter-spacing:.08em;
-}
-.person b{display:block; font-size:21px; font-weight:500; line-height:1.25}
-.person span{color:var(--muted)}
+.studio{display:grid; gap:8px}
+@media(min-width:900px){ .studio{grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:72px; align-items:start} }
 
 /* ---- contact ---- */
 .mail{
@@ -265,16 +257,10 @@ footer nav a:hover{color:var(--ink)}
   <div class="wrap">
     <div class="head caps reveal"><span class="num">02</span><span>Studio</span><span class="rule"></span></div>
     <div class="studio">
-      <div class="reveal">
-        <h2>Two founders. One small studio.</h2>
-        <p class="sub">We started NMG Studios in 2026 to make the kind of games we actually want to
+      <h2 class="reveal">Two founders. One small studio.</h2>
+      <p class="sub reveal">We started NMG Studios in 2026 to make the kind of games we actually want to
         play: ones that are clever, calm and don't nag you. We design, build and publish
         everything ourselves, from London.</p>
-      </div>
-      <div class="people reveal">
-        <div class="person"><div class="initials" aria-hidden="true">AA</div><div><b>Adam Araim</b><span>Co-founder &amp; Director</span></div></div>
-        <div class="person"><div class="initials" aria-hidden="true">MA</div><div><b>Mohammed Ali</b><span>Co-founder &amp; Director</span></div></div>
-      </div>
     </div>
   </div>
 </section>
@@ -297,7 +283,6 @@ footer nav a:hover{color:var(--ink)}
       <div><dt>Company name</dt><dd>NMG STUDIOS LTD</dd></div>
       <div><dt>Registered in</dt><dd>England and Wales</dd></div>
       <div><dt>Company number</dt><dd>17428076</dd></div>
-      <div><dt>Directors</dt><dd>Adam Araim, Mohammed Ali</dd></div>
       <div><dt>Email</dt><dd><a href="mailto:ali.m021216@gmail.com">ali.m021216@gmail.com</a></dd></div>
     </dl>
   </div>
